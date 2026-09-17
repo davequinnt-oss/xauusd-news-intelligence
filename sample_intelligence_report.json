@@ -1,0 +1,28 @@
+{
+  "p_down": 0.68,
+  "predicted_abs_move_pct": 0.42,
+  "drivers": [
+    "Model directional probability is tilted bearish.",
+    "A hawkish repricing of the expected Fed path would increase downside pressure on gold.",
+    "DXY and real yields are key confirmation variables."
+  ],
+  "confirmation": {
+    "DXY": "Pending post-release confirmation",
+    "US 2Y": "Pending post-release confirmation",
+    "US real yield": "Pending post-release confirmation",
+    "XAUUSD": "Pending post-release confirmation"
+  },
+  "scenarios": {
+    "bearish": "Hawkish surprise plus rising USD/yields and weak gold follow-through.",
+    "bullish": "Dovish surprise plus falling USD/yields and gold reclaiming structure.",
+    "mixed": "Headline close to expectations or cross-market signals disagree."
+  },
+  "invalidation": [
+    "DXY reverses against the initial interpretation.",
+    "Real yields reverse materially.",
+    "Gold reclaims the structure that supported the initial bearish interpretation.",
+    "Later communication changes the policy-path interpretation."
+  ],
+  "whipsaw_risk": "High immediately after release; reassess after cross-market confirmation.",
+  "volatility_regime": "High around major central-bank releases."
+}

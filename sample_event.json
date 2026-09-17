@@ -1,0 +1,21 @@
+{
+  "event": "FOMC",
+  "actual": null,
+  "forecast": null,
+  "previous": null,
+  "surprise_scale": 1,
+  "rate_surprise_bp": 0,
+  "inflation_pressure": 0,
+  "employment_pressure": 0,
+  "dotplot_change_bp": 0,
+  "guidance_hawkish_score": 0,
+  "terminal_rate_change_bp": 0,
+  "dxy_pre_pct": 0,
+  "us2y_pre_bp": 0,
+  "us10y_pre_bp": 0,
+  "real10y_pre_bp": 0,
+  "gold_pre_pct": 0,
+  "gold_bearish_structure": 0,
+  "gold_bullish_structure": 0,
+  "event_volatility_score": 1
+}

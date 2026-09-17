@@ -1,0 +1,25 @@
+CME FEDWATCH IMPORT SCHEMA
+
+CME FedWatch is the intended professional source for market-implied FOMC
+probabilities. CME says its FedWatch probabilities are derived from 30-Day
+Fed Funds futures and its API provides historical data back to 2015.
+The API requires CME access credentials/subscription.
+
+This file defines the normalized columns our engine expects:
+
+meeting_date,snapshot_time,target_rate,probability
+
+Example:
+2026-09-16,2026-09-15T13:00:00Z,3.50,0.72
+
+Do not invent historical probabilities. Export/download them from CME FedWatch
+or use the licensed API, then map the data into this schema.
+
+The engine should calculate:
+- probability of each target-rate outcome
+- expected target rate
+- change in expected target rate from 1 day / 1 week / 1 month
+- surprise relative to the already-priced path
+
+CME FedWatch documentation:
+https://www.cmegroup.com/tools-information/quikstrike/cme-fedwatch-tool-user-guide.html

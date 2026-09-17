@@ -1,0 +1,32 @@
+# XAU News Engine — Macro Event Dataset Schema
+
+One row = one scheduled U.S. macroeconomic release.
+
+Required core fields:
+date,time,event,country,actual,forecast,previous,unit,importance
+
+Reaction fields (can be populated by the event-study builder):
+target_horizon_minutes,xau_return_pct,dxy_return_pct,us2y_change_bp,real10y_change_bp,target_down
+
+Recommended additional fields:
+source,release_id,snapshot_time,revision,actual_revision,forecast_source
+
+Rules:
+1. Do not fabricate forecast/consensus values.
+2. Keep release timestamp in UTC.
+3. `actual`, `forecast`, and `previous` should be numeric where possible.
+4. `unit` must describe the measurement (%, index, thousands, USD, etc.).
+5. `importance` should be normalized to low/medium/high.
+6. Reaction labels must be computed only from data available at/after the release.
+7. Never use future information to create a pre-release feature.
+8. If a release is revised later, preserve the original release and store the revision separately.
+
+Suggested event families:
+CPI, Core CPI, PCE, Core PCE, NFP, Unemployment Rate, Average Hourly Earnings,
+Initial Jobless Claims, Continuing Claims, PPI, Core PPI, Retail Sales,
+Core Retail Sales, ISM Manufacturing, ISM Services, GDP, ADP Employment,
+JOLTS, Consumer Confidence, Michigan Sentiment, FOMC Rate Decision,
+FOMC Press Conference, FOMC SEP/Dot Plot.
+
+Example header:
+date,time,event,country,actual,forecast,previous,unit,importance,target_horizon_minutes,xau_return_pct,dxy_return_pct,us2y_change_bp,real10y_change_bp,target_down

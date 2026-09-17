@@ -1,0 +1,24 @@
+HISTORICAL CALIBRATION PLAN
+
+The first dataset is an EVENT-STUDY dataset, not yet the final prediction dataset.
+
+Why:
+- Official Fed pages provide reliable FOMC dates/statements/SEPs.
+- FRED provides daily DGS2, DGS10 and DFII10 Treasury series.
+- Market prices can provide the reaction label.
+- Historical consensus forecasts are a separate data problem and should not be
+  invented.
+
+Official FOMC calendars list meetings and identify SEP meetings. The Fed also
+publishes statements, minutes and projection materials. See:
+https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm
+
+FRED's DGS2, DGS10 and DFII10 series are daily Treasury/yield series.
+
+NEXT DATA UPGRADE:
+Add historical consensus and actual values for CPI, PCE, NFP and FOMC/rate
+expectations. Then compute true standardized surprises and run walk-forward
+calibration.
+
+DO NOT train and evaluate on the same period as a final performance claim.
+Use chronological train/validation/test splits.
